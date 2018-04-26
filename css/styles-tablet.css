@@ -9,3 +9,16 @@ nav {
 .filter-options select {
   font-size: 12pt;
 }
+/* ====================== Restaurant Details ====================== */
+.inside #map-container {
+  height: 400px;
+}
+#restaurant-cuisine {
+  font-size: 14pt;
+}
+#restaurant-address {
+  font-size: 14pt;
+}
+#restaurant-hours td {
+  font-size: 12pt;
+}
