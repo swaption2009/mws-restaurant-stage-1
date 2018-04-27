@@ -150,7 +150,18 @@ class DBHelper {
    * Restaurant image URL.
    */
   static imageUrlForRestaurant(restaurant) {
-    return (`/img/desktop/${restaurant.photograph}`);
+    // TODO add width change addListener
+    // TODO example from https://www.sitepoint.com/javascript-media-queries/
+    const mq_tablet = window.matchMedia("(min-width: 450px)");
+    const mq_desktop = window.matchMedia("(min-width: 800px)");
+
+    if (mq_desktop.matches) {
+      return (`/img/desktop/${restaurant.photograph}`);
+    } else if (mq_tablet.matches) {
+      return (`/img/tablet/${restaurant.photograph}`);
+    } else {
+      return (`/img/mobile/${restaurant.photograph}`);
+    }
   }
 
   /**
