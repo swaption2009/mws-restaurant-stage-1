@@ -3,8 +3,8 @@ let staticCacheName = 'restaurants-static-v1';
 self.addEventListener('install', event => {
   let UrlsToCache = [
     '/',
-    'index.html',
-    'restaurant.html',
+    '/index.html',
+    '/restaurant.html',
     '/data/restaurants.json',
     '/css/styles.css',
     '/css/styles-tablet.css',
@@ -22,7 +22,6 @@ self.addEventListener('install', event => {
     '/img/desktop/8.jpg',
     '/img/desktop/9.jpg',
     '/img/desktop/10.jpg',
-    // 'https://maps.googleapis.com/maps/api/js?key=AIzaSyBnBSuoy63BVBmMAbnx0B5i98fsvCZZT94&libraries=places&callback=initMap',
   ];
 
   event.waitUntil(
