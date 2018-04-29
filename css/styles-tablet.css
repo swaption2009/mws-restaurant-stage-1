@@ -1,6 +1,5 @@
-/* ====================== Navigation ====================== */
-nav {
-  height: 80px;
+ul, li {
+  font-size: 14pt;
 }
 /* ====================== Restaurant Filtering ====================== */
 .filter-options h2 {

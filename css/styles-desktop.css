@@ -1,3 +1,6 @@
+ul, li {
+  font-size: 16pt;
+}
 /* ====================== Restaurant Filtering ====================== */
 .filter-options h2 {
   width: 20%;
