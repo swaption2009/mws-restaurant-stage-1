@@ -60,6 +60,18 @@ fillRestaurantHTML = (restaurant = self.restaurant) => {
   image.src = DBHelper.imageUrlForRestaurant(restaurant);
   image.alt = `showing photo of ${restaurant.name}`;
 
+  // add JS responsive image using matchMedia addListener
+  const mq_tablet = window.matchMedia("(min-width: 450px)");
+  mq_tablet.addListener(mq => {
+    if (mq.matches) {
+      console.log("above 450px");
+      return image.src = (`/img/desktop/${restaurant.photograph}`);
+    } else {
+      console.log('smaller than 450px')
+      return image.src = (`/img/tablet/${restaurant.photograph}`);
+    }
+  });
+
   const cuisine = document.getElementById('restaurant-cuisine');
   cuisine.innerHTML = restaurant.cuisine_type;
 

@@ -150,8 +150,6 @@ class DBHelper {
    * Restaurant image URL.
    */
   static imageUrlForRestaurant(restaurant) {
-    // TODO add width change addListener
-    // TODO example from https://www.sitepoint.com/javascript-media-queries/
     const mq_tablet = window.matchMedia("(min-width: 450px)");
     const mq_desktop = window.matchMedia("(min-width: 800px)");
 

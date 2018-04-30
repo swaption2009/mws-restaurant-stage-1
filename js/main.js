@@ -142,6 +142,16 @@ createRestaurantHTML = (restaurant) => {
   image.className = 'restaurant-img';
   image.src = DBHelper.imageUrlForRestaurant(restaurant);
   image.alt = `showing photo of ${restaurant.name}`;
+
+  // add JS responsive image using matchMedia addListener
+  const mq_tablet = window.matchMedia("(min-width: 450px)");
+  mq_tablet.addListener(mq => {
+    if (mq.matches) {
+      return image.src = (`/img/desktop/${restaurant.photograph}`);
+    } else {
+      return image.src = (`/img/tablet/${restaurant.photograph}`);
+    }
+  });
   li.append(image);
 
   const name = document.createElement('h1');
